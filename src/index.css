@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* css background-image generated using https://10015.io/tools/css-background-pattern-generator */
+
+
+html,body{
+    overflow-x: hidden;
+}
+
+@keyframes ping {
+    25%{
+      transform: scale(0.25);
+    }
+    50%{
+      transform: scale(0.5);
+      animation-delay: 3s;
+    }
+    100%{
+      transform: scale(1);
+    }
+  }
