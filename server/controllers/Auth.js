@@ -1,8 +1,8 @@
 const User = require("../models/User");
 const OTP = require("../models/OTP");
 const otpGenrator = require("otp-generator");
-const bcrypt = require("bcrypt");
-const Profile = require("../models/Profile")
+const bcrypt = require("bcryptjs");
+const Profile = require("../models/Profile");
 const jwt = require("jsonwebtoken");
 require("dotenv").config();
 
@@ -120,7 +120,8 @@ exports.signUp = async(req,res)  => {
         }
         
         //hash password
-        const hashPassword = await bcrypt.hash(password,10);
+        //hash password using bcryptjs
+        const hashPassword = await bcrypt.hash(password, 10);
         
         
         //entery created in dp
